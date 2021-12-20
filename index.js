@@ -3,6 +3,10 @@ const express = require("express");
 const server = express();
 const bodyParser = require("body-parser");
 
+// Servidor para deploy
+const host = "0.0.0.0";
+const port = process.env.PORT || 3000;
+
 // Body Parser
 server.use(bodyParser.urlencoded({ extended: false }));
 server.use(bodyParser.json());
@@ -75,6 +79,6 @@ server.post("/add-service", (req, res) => {
 });
 
 // Liga o servidor
-server.listen(3000, () => { 
+server.listen(port, host, () => { 
     console.log("Servidor rodando com sucesso");
 });
