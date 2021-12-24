@@ -1,6 +1,7 @@
 // Importações
 const express = require("express");
 const app = express();
+const Cliente = require("../model/cliente");
 
 // Configurando a engine de visualização
 const bodyParser = require("body-parser");
@@ -37,14 +38,14 @@ app.post("/add-client", (req, res) => {
     MongoClient.connect(uri, function(err, db) {
         if (err) throw err;
         var dbo = db.db("LandingPage");
-        var myobj = { 
-            nomeCompleto: req.body.nome, 
-            nascimento: req.body.nascimento,
-            email: req.body.email,
-            telefone: req.body.telefone,
-            atividade: req.body.atividade 
-        };
-        dbo.collection("clientes").insertOne(myobj, function(err, res) {
+        var cliente = new Cliente(
+            req.body.nome, 
+            req.body.nascimento, 
+            req.body.email, 
+            req.body.telefone, 
+            req.body.atividade
+        );
+        dbo.collection("clientes").insertOne(cliente, function(err, res) {
             if (err) throw err;
             console.log("Dado inserido com sucesso");
             db.close();
@@ -57,14 +58,14 @@ app.post("/add-service", (req, res) => {
     MongoClient.connect(uri, function(err, db) {
         if (err) throw err;
         var dbo = db.db("LandingPage");
-        var myobj = { 
-            nomeCompleto: req.body.nome, 
-            nascimento: req.body.nascimento,
-            email: req.body.email,
-            telefone: req.body.telefone,
-            atividade: req.body.atividade 
-        };
-        dbo.collection("prestadores").insertOne(myobj, function(err, res) {
+        var cliente = new Cliente(
+            req.body.nome, 
+            req.body.nascimento, 
+            req.body.email, 
+            req.body.telefone, 
+            req.body.atividade
+        );
+        dbo.collection("prestadores").insertOne(cliente, function(err, res) {
             if (err) throw err;
             console.log("Dado inserido com sucesso");
             db.close();
