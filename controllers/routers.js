@@ -2,6 +2,7 @@
 const express = require("express");
 const app = express();
 const Cliente = require("../model/cliente");
+require("dotenv/config");
 
 // Configurando a engine de visualização
 const bodyParser = require("body-parser");
@@ -13,7 +14,7 @@ app.set('view engine', 'ejs');
 
 // Banco de dados
 const mongodb = require('mongodb');
-const uri = "mongodb+srv://fulano-resolve:freelancer182@cluster0.3nljq.mongodb.net/pre_cadastro?retryWrites=true&w=majority";
+const uri = process.env.URI;
 const MongoClient = mongodb.MongoClient;
 
 // Declarando as pastas como estáticas
@@ -37,7 +38,7 @@ app.get("/prestadores-de-servico", (req, res) => {
 app.post("/add-client", (req, res) => {
     MongoClient.connect(uri, function(err, db) {
         if (err) throw err;
-        var dbo = db.db("LandingPage");
+        var dbo = db.db(process.env.DB);
         var cliente = new Cliente(
             req.body.nome, 
             req.body.nascimento, 
@@ -45,7 +46,7 @@ app.post("/add-client", (req, res) => {
             req.body.telefone, 
             req.body.atividade
         );
-        dbo.collection("clientes").insertOne(cliente, function(err, res) {
+        dbo.collection(process.env.CLIENT).insertOne(cliente, function(err, res) {
             if (err) throw err;
             console.log("Dado inserido com sucesso");
             db.close();
@@ -57,7 +58,7 @@ app.post("/add-client", (req, res) => {
 app.post("/add-service", (req, res) => {
     MongoClient.connect(uri, function(err, db) {
         if (err) throw err;
-        var dbo = db.db("LandingPage");
+        var dbo = db.db(process.env.DB);
         var cliente = new Cliente(
             req.body.nome, 
             req.body.nascimento, 
@@ -65,7 +66,7 @@ app.post("/add-service", (req, res) => {
             req.body.telefone, 
             req.body.atividade
         );
-        dbo.collection("prestadores").insertOne(cliente, function(err, res) {
+        dbo.collection(process.env.SERVICE).insertOne(cliente, function(err, res) {
             if (err) throw err;
             console.log("Dado inserido com sucesso");
             db.close();
