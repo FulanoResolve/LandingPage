@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Fulano Resolve - Cadastro de Clientes</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2fbdefb9ed.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="Imagens\frlogo.png" class="logo"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fas fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">INICIO</a></li>
+                    <li><a href="about.html">SOBRE NÓS</a></li>
+                    <li><a href="contact.html">CONTATO</a></li>
+                </ul>
+            </div>
+            <i class="fas fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1>VOCÊ É CLIENTE?</h1>
+        <p>Faça já seu pré-cadastro em nossa plataforma</p>
+    </section>
+
+<!----------------------------- FORMS ----------------------------->
+
+    <form action="/add-client" method="post" class="form">
+        <label>
+            Nome Completo
+            <br>
+            <input type="text" name="nome" id="nome" required>
+        </label>
+
+        <label>
+            Data de Nascimento
+            <br>
+            <input type="date" name="nascimento" id="nascimento" required>
+        </label>
+
+        <label>
+            E-mail
+            <br> 
+            <input type="email" name="email" id="email" required>
+        </label>
+
+        <label for="telefone">
+            Telefone
+            <br>
+            <input type="tel" name="telefone" id="telefone" required placeholder="(xx) xxxxx-xxxx">
+        </label>
+
+        <label for="atividades">
+            Qual a principal atividade que você utiliza de prestação de serviço?
+            <br>
+            <input type="text" name="atividade" id="atividade" required>
+        </label>
+        
+        <button type="submit" class="cta-btnp">Enviar</button>
+
+    </form>
+
+<!----------------------------- FOOTER ----------------------------->
+
+<section class="footer">
+    <div class="logo">
+        <img src="Imagens\frlogo.png">
+    </div>
+    <div class="row">
+        <div class=copr>
+            <p>Copyright © 2022 Fulano Resolve, Co.</p>
+        </div>
+
+        <div class="icons">
+            <a href="https://www.facebook.com/fulanoresolve" class="fab fa-facebook"></a>
+            <a href="https://www.instagram.com/fulanoresolve/" class="fab fa-instagram"></a>
+            <a href="https://www.linkedin.com/company/fulanoresolve/" class="fab fa-linkedin"></a>
+        </div>
+        
+        <div class="links">
+            <ul>
+                <li><a>LINKS:</a></li>
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="about.html">SOBRE NÓS</a></li>
+                <li><a href="contact.html">CONTATO</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!----------------------------- JS ----------------------------->
+
+<script>
+    var navLinks =document.getElementById("navLinks");
+
+    function showMenu()
+    {
+        navLinks.style.right = "0";
+    }
+    function hideMenu()
+    {
+        navLinks.style.right = "-200px";
+    }
+</script>
+
+</body>
+
+</html>

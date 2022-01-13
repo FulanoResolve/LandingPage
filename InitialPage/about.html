@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Fulano Resolve - Sobre Nós</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2fbdefb9ed.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<!----------------------------- SOBRE NÓS PÁGINA ----------------------------->
+
+<section class="sub-header">
+	<nav>
+        <a href="index.html"><img src="Imagens\frlogo.png" class="logo"></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fas fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="about.html">SOBRE NÓS</a></li>
+                <li><a href="contact.html">CONTATO</a></li>
+            </ul>
+        </div>
+        <i class="fas fa-bars" onclick="showMenu()"></i>
+    </nav>
+    <h1>SOBRE NÓS</h1>
+</section>
+
+<section class="about-content">
+    <div class="row">
+        <div class="about-col">
+            <h1>QUEM SOMOS</h1>
+            <p>O FULANO RESOLVE é uma Startup em desenvolvimento com o intuito de oferecer uma plataforma com os melhores especialistas em resolver problemas no Brasil. 
+                Com ele será possível, contratar prestadores de serviços de diversas áreas sem sair da sua residência ou da sua empresa, tudo isso em apenas um clique, 
+                com um sistema de agendamento personalizado, perfil verificado e avaliado pelos usuários. Nosso diferencial irá muito além de oferecer soluções, nós ajudamos 
+                pessoas, oferecendo segurança na contratação, praticidade e educação financeira aos nossos clientes, uma ferramenta que irá movimentar a economia através 
+                das conexões e gerar riquezas para população.</p>
+        </div>
+        <div class="about-col">
+            <img src="Imagens\frlogoslogan.png">
+        </div>
+    </div>
+</section>
+
+<section class="team">
+    <h1>NOSSA EQUIPE</h1>
+    <div class="rowbig">
+        <div class="row">
+            <div class="team-col">
+                <img src="Imagens/tleonardo.jpg">
+                <div>
+                    <h3>LEONARDO AMARAL</h3>
+                    <p>Fundador e CEO</p>
+                </div>
+            </div>
+            
+            <div class="team-col">
+                <img src="Imagens/tjanaina.jpg">
+                <div>
+                    <h3>JANAINA DE OLIVEIRA</h3>
+                    <p>Co-Fundadora e COO</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="team-col">
+                <img src="Imagens\tlucas.jpg">
+                <div>
+                    <h3>LUCAS MARTINS</h3>
+                    <p>Desenvolvedor</p>
+                </div>
+            </div>
+    
+            <div class="team-col">
+                <img src="Imagens\tjoselucas.jpg">
+                <div>
+                    <h3>JOSÉ LUCAS</h3>
+                    <p>Desenvolvedor</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!----------------------------- FOOTER ----------------------------->
+
+<section class="footer">
+    <div class="logo">
+        <img src="Imagens\frlogo.png">
+    </div>
+    <div class="row">
+        <div class=copr>
+            <p>Copyright © 2022 Fulano Resolve, Co.</p>
+        </div>
+
+        <div class="icons">
+            <a href="https://www.facebook.com/fulanoresolve" class="fab fa-facebook"></a>
+            <a href="https://www.instagram.com/fulanoresolve/" class="fab fa-instagram"></a>
+            <a href="https://www.linkedin.com/company/fulanoresolve/" class="fab fa-linkedin"></a>
+        </div>
+        
+        <div class="links">
+            <ul>
+                <li><a>LINKS:</a></li>
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="about.html">SOBRE NÓS</a></li>
+                <li><a href="contact.html">CONTATO</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!----------------------------- JS ----------------------------->
+
+<script>
+    var navLinks =document.getElementById("navLinks");
+
+    function showMenu()
+    {
+        navLinks.style.right = "0";
+    }
+    function hideMenu()
+    {
+        navLinks.style.right = "-200px";
+    }
+</script>
+
+</body>
+
+</html>
