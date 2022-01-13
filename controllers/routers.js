@@ -89,13 +89,13 @@ app.post("/send-message", (req, res) => {
     MongoClient.connect(uri, function(err, db) {
         if (err) throw err;
         var dbo = db.db(process.env.DB);
-        var cliente = new Mensagem(
-            req.body.nome, 
+        var mensagem = new Mensagem(
+            req.body.name, 
             req.body.email, 
-            req.body.assunto, 
-            req.body.mensagem
+            req.body.subject, 
+            req.body.message
         );
-        dbo.collection(process.env.MESSAGE).insertOne(cliente, function(err, res) {
+        dbo.collection(process.env.MESSAGE).insertOne(mensagem, function(err, res) {
             if (err) throw err;
             console.log("Dado inserido com sucesso");
             db.close();
