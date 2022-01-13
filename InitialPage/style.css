@@ -700,3 +700,36 @@ nav .fas
        margin-right: 15px;
     }
 }
+
+/*------------------------- FORMS CLIENTES/PRESTADORES -------------------------*/
+
+.sub-header p
+{
+    font-size: 20px;
+    font-weight: 600px;
+    margin: 20px;
+}
+
+.form
+{
+    width: 80%;
+    margin: auto;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.form input
+{
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 17px;
+    outline: none;
+    border: 1px solid #444444;
+    box-sizing: border-box;
+}
+
+.form label
+{
+    font-size: 18px;
+    font-weight: 500;
+}
