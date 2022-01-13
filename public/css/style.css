@@ -13,7 +13,7 @@
 	position: relative;
 	width: 100%;
 	min-height: 100vh;
-    background-image: url("Imagens/bkghero.png");
+    background-image: url("LandingPage/public/Imagens/bkghero.png");
     background-size: cover;
     background-position: center;
 }
