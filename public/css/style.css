@@ -733,3 +733,18 @@ nav .fas
     font-size: 18px;
     font-weight: 500;
 }
+
+@media(max-height: 800px)
+{
+    .sub-header p
+    {
+        margin: 20px 0 30px;
+    }
+
+    .form
+    {
+        margin: auto;
+        margin-top: 80px;
+    }
+
+}
