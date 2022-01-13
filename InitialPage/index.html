@@ -1,42 +1,152 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Fulano Resolve</title>
+    <title>Fulano Resolve - Inicio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2fbdefb9ed.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-	<section>
-		<div class="nav" id="nav">
-			<a href="#"><img src="Imagens\frlogo.png" class="logo"></a>
-			<ul>
-				<li><a href="#">Inicio</a></li>
-				<li><a href="#">Funcionamento</a></li>
-				<li><a href="#">Serviços</a></li>
-				<li><a href="#">Sobre Nós</a></li>
-				<li><a href="#" class="icon" onclick="somefunction()"><i class="fa fa-bars"></i></a></li>
-			</ul>
-		</div>
 
-		<div class="content">
-			<div class="text">
-				<h2>Fulano<br>Resolve<br></h2>
-				<h1>Resolvendo Problemas<br>e Gerando Conexões</h1>
-				<p>Em breve resolveremos seus problemas com apenas um clique.</p>
-				<a href="#">Pré-Registro</a>
-			</div>
-			<div class="imgCellPhone">
-				<img src="Imagens\cellphone.png" class="cellphone">
-			</div>
-		</div>
-		<ul class="social">
-				<li><a href="#"><img src="Imagens\logofb.png"></a></li>
-				<li><a href="https://www.instagram.com/fulanoresolve/?utm_medium=copy_link"><img src="Imagens\logoig.png"></a></li>
-		</ul>
-	</section>
+<!----------------------------- HERO ----------------------------->
+
+<section class="header">
+	<nav>
+        <a href="#"><img src="Imagens\frlogo.png" class="logo"></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fas fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="about.html">SOBRE NÓS</a></li>
+                <li><a href="contact.html">CONTATO</a></li>
+                <!--li><a href="">PRÉ-REGISTRO</a></li-->
+            </ul>
+        </div>
+        <i class="fas fa-bars" onclick="showMenu()"></i>
+    </nav>
+
+	<div class="content">
+        <div class="row">
+            <div class="content-l">
+                <h1>SURGIU UM PROBLEMA E NÃO SABE QUEM RESOLVE?</h1>
+                <h2>Conectamos você aos melhores especialistas<br>em resolver problemas, de forma simples,<br>livre e avaliativa.</h2>
+                <p>É CLIENTE OU PRESTADOR DE SERVIÇOS?<br>REGISTRE-SE AGORA GRATUITAMENTE:</p>
+                <a class="cta-btnc" href="#">SOU CLIENTE</a>
+                <a class="cta-btnp" href="#">SOU PRESTADOR</a>
+            </div>
+            <div class="content-r">
+                <img src="Imagens\cellphone.png" class="cellphone">
+            </div>
+        </div>
+	</div>
+</section>
+
+<!----------------------------- SERVIÇOS ----------------------------->
+
+<section class="serv">
+    <h1>NOSSOS SERVIÇOS</h1>
+    <p>Conheça alguns dos tipos de serviços que estarão disponíveis dentro da nossa plataforma:</p>
+    <div class="row">
+        <div class="serv-col">
+            <img src="Imagens\smanutencao.png">
+            <div class="layer">
+                <h3>MANUTENÇÃO DE AUTOMÓVEIS</h3>
+            </div>
+        </div>
+        
+        <div class="serv-col">
+            <img src="Imagens\sdomestico.png">
+            <div class="layer">
+                <h3>SERVIÇOS DOMÉSTICOS</h3>
+            </div>
+        </div>
+
+        <div class="serv-col">
+            <img src="Imagens\sfesta.png">
+            <div class="layer">
+                <h3>FESTAS E EVENTOS</h3>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="serv-col">
+            <img src="Imagens\sbeleza.png">
+            <div class="layer">
+                <h3>MODA E BELEZA</h3>
+            </div>
+        </div>
+        
+        <div class="serv-col">
+            <img src="Imagens\stecnologia.png">
+            <div class="layer">
+                <h3>TECNOLOGIA</h3>
+            </div>
+        </div>
+
+        <div class="serv-col">
+            <img src="Imagens\smais.png">
+            <div class="layer">
+                <h3>MUITO MAIS</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!----------------------------- CALL TO ACTION ----------------------------->
+
+<section class="cta">
+    <h1>Em breve traremos a solução dos seus problemas para a palma das suas mãos.<br>Cadastre-se agora e tenha acesso antecipado a todos os benefícios:</h1>
+    <a class="cta-btnp" href="#">PRÉ-REGISTRO</a>
+</section>
+
+<!----------------------------- FOOTER ----------------------------->
+
+<section class="footer">
+    <div class="logo">
+        <img src="Imagens\frlogo.png">
+    </div>
+    <div class="row">
+        <div class=copr>
+            <p>Copyright © 2022 Fulano Resolve, Co.</p>
+        </div>
+
+        <div class="icons">
+            <a href="https://www.facebook.com/fulanoresolve" class="fab fa-facebook"></a>
+            <a href="https://www.instagram.com/fulanoresolve/" class="fab fa-instagram"></a>
+            <a href="https://www.linkedin.com/company/fulanoresolve/" class="fab fa-linkedin"></a>
+        </div>
+        
+        <div class="links">
+            <ul>
+                <li><a>LINKS:</a></li>
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="about.html">SOBRE NÓS</a></li>
+                <li><a href="contact.html">CONTATO</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!----------------------------- JS ----------------------------->
+
+<script>
+    var navLinks =document.getElementById("navLinks");
+
+    function showMenu()
+    {
+        navLinks.style.right = "0";
+    }
+    function hideMenu()
+    {
+        navLinks.style.right = "-200px";
+    }
+</script>
 
 </body>
 
