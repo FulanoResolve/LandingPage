@@ -90,10 +90,10 @@ app.post("/send-message", (req, res) => {
         if (err) throw err;
         var dbo = db.db(process.env.DB);
         var mensagem = new Mensagem(
-            req.body.nome, 
+            req.body.name, 
             req.body.email, 
-            req.body.assunto, 
-            req.body.mensagem
+            req.body.subject, 
+            req.body.message
         );
         dbo.collection(process.env.MESSAGE).insertOne(mensagem, function(err, res) {
             if (err) throw err;
