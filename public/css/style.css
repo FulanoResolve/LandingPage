@@ -734,6 +734,20 @@ nav .fas
     font-weight: 500;
 }
 
+@media(max-width: 700px)
+{
+    .sub-header h1
+    {
+        font-size: 30px;
+    }
+
+    .form
+    {
+        margin: auto;
+        margin-top: 60px;
+    }
+}
+
 @media(max-height: 800px)
 {
     .sub-header p
@@ -746,5 +760,4 @@ nav .fas
         margin: auto;
         margin-top: 80px;
     }
-
 }
