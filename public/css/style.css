@@ -211,12 +211,17 @@ nav .fas
     {
         display: none;
     }
-
+	
     .cta-btnc
     {
         margin-right: 0;
     }
-
+    
+    .content .cta-btnp
+    {
+        margin-bottom: 25px;
+    }
+	
     .nav-links
     {
         position: fixed;
